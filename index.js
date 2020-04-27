@@ -21,10 +21,11 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/proyectos', require('./routes/proyectos'))
 app.use('/api/tareas', require('./routes/tareas'))
 
-// Puerto de la app
-const PORT = process.env.PORT || 4000
+//SERVIDOR Y PUERTO PARA HEROKU
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 // Arrancar el servidor
-app.listen(PORT, () => {
-    console.log(`El servidor está ejecutándose en el puerto ${PORT}`)
+app.listen(port, host, () => {
+    console.log(`El servidor está ejecutándose en el puerto ${port}`)
 })
