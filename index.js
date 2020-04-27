@@ -41,7 +41,7 @@ app.use('/api/tareas', require('./routes/tareas'))
 
 //SERVIDOR Y PUERTO PARA HEROKU
 const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Arrancar el servidor
 app.listen(port, host, () => {
